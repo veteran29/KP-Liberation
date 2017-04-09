@@ -11,7 +11,8 @@ KP_liberation_ace = false;
 KP_liberation_medical_vehicles = [
 	"B_Truck_01_medical_F",
 	"rhsusf_m113d_usarmy_medical",
-	"RHS_UH60M_MEV2"
+	"RHS_UH60M_MEV2",
+	"rhs_gaz66_ap2_msv"
 ];
 
 // Which units preset should be used?
@@ -21,6 +22,7 @@ KP_liberation_medical_vehicles = [
 // 3 = RHS Setting
 // 4 = RHS with BW Mod Setting
 // 5 = Vanilla Apex Tanoa
+// 6 = RHS and Project Opfor, play as Opfor vs CDF
 KP_liberation_preset = 1;
 
 // Which arsenal preset should be used?
