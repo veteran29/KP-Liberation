@@ -7,3 +7,7 @@ _marker setMarkerSizeLocal [ GRLIB_capture_size, GRLIB_capture_size ];
 _marker = createMarkerLocal ["spawn_marker", markers_reset];
 _marker setMarkerColorLocal "ColorGreen";
 _marker setMarkerTypeLocal "Select";
+
+"base_chimera" setMarkerColorLocal GRLIB_color_friendly;
+"lhd" setMarkerColorLocal GRLIB_color_friendly;
+"huronmarker" setMarkerColorLocal GRLIB_color_friendly;
