@@ -17,6 +17,13 @@ switch (KP_liberation_preset) do {
 	default {[] call compileFinal preprocessFileLineNumbers "presets\custom.sqf";};
 };
 
+switch (KP_liberation_groupicons) do {
+	case 0: {[] call compileFinal preprocessFileLineNumbers "scripts\shared\classnames\groupicons_blufor.sqf";};
+	case 1: {[] call compileFinal preprocessFileLineNumbers "scripts\shared\classnames\groupicons_opfor.sqf";};
+	case 2: {[] call compileFinal preprocessFileLineNumbers "scripts\shared\classnames\groupicons_indfor.sqf";};
+	default {[] call compileFinal preprocessFileLineNumbers "scripts\shared\classnames\groupicons_blufor.sqf";};
+};
+
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\classnames.sqf";
 
 [] execVM "GREUH\scripts\GREUH_activate.sqf";
