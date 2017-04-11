@@ -21,13 +21,13 @@ while { true } do {
 				_grouptype = [_localgroup] call F_getGroupType;
 				_groupicon = "";
 				switch (_grouptype) do {
-					case "infantry": { _groupicon = "b_inf" };
-					case "light": { _groupicon = "b_motor_inf" };
-					case "heavy": { _groupicon = "b_armor" };
-					case "air": { _groupicon = "b_air" };
-					case "support": { _groupicon = "b_maint" };
-					case "static": { _groupicon = "b_mortar" };
-					case "uav": { _groupicon = "b_uav" };
+					case "infantry": { _groupicon = KP_group_icon_f_inf };
+					case "light": { _groupicon = KP_group_icon_f_motor_inf };
+					case "heavy": { _groupicon = KP_group_icon_f_armor };
+					case "air": { _groupicon = KP_group_icon_f_air };
+					case "support": { _groupicon = KP_group_icon_f_support };
+					case "static": { _groupicon = KP_group_icon_f_mortar };
+					case "uav": { _groupicon = KP_group_icon_f_uav };
 					default {  };
 				};
 
@@ -40,7 +40,7 @@ while { true } do {
 					if ( _groupsize >= 6 ) then { _groupiconsize = "group_2" };
 					if ( _groupsize >= 10 ) then { _groupiconsize = "group_3" };
 
-					_localgroup addGroupIcon [ _groupiconsize, [ 0,0 ] ];
+					_localgroup addGroupIcon [ _groupiconsize, KP_group_size_offset_f ];
 				};
 
 				_iconed_groups pushback _x;
@@ -53,7 +53,7 @@ while { true } do {
 		if ( isplayer leader _x ) then {
 			_color = [0.8,0.8,0,1];
 		} else {
-			_color = [0,0.3,0.8,1];
+			_color = KP_group_color_f;
 		};
 		_x setGroupIconParams [_color,"",1,true];
 	} foreach _iconed_groups;

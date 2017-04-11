@@ -32,6 +32,12 @@ KP_liberation_preset = 1;
 // 5 = RHS United States Armed Forces Arsenal with ACE and ACRE Preset
 KP_liberation_arsenal = 0;
 
+// Which group icons preset should be used?
+// 0 = BLUFOR Icons
+// 1 = OPFOR Icons
+// 2 = INDFOR Icons
+KP_liberation_groupicons = 0;
+
 // Fuel Consumption
 // Time in Minutes till a full tank depletes when the vehicle is standing with running engine
 KP_liberation_fuel_neutral = 180;
