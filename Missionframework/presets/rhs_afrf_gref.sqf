@@ -2,9 +2,9 @@
 GRLIB_side_friendly = EAST;
 GRLIB_side_enemy = WEST;
 
-GRLIB_color_friendly = "ColorOPFOR";
-GRLIB_color_enemy = "ColorBLUFOR";
-GRLIB_color_enemy_bright = "ColorBlue";
+//GRLIB_color_friendly = "ColorOPFOR";
+//GRLIB_color_enemy = "ColorBLUFOR";
+//GRLIB_color_enemy_bright = "ColorBlue";
 
 GRLIB_civ_killing_penalty = 60;
 
@@ -89,8 +89,16 @@ heavy_vehicles_extension = [
 	["rhsgref_BRDM2_msv",0,70,10],
 	["rhsgref_BRDM2_ATGM_msv",0,110,10],
 	["rhs_zsu234_aa",0,200,15],
-	["rhs_bmp1d_msv",0,200,15],
+	["rhs_bmp1d_msv",0,180,12],
+	["rhs_btr80_msv",0,110,12],
+	["rhs_btr80a_msv",0,180,12],
+	["rhs_bmd1p",0,190,15],
+	["rhs_bmd1",0,200,15],
 	["rhs_bmp2d_msv",0,250,15],
+	["rhs_bmd2k",0,220,17],
+	["rhs_bmd2m",0,300,17],
+	["rhs_bmd4m_vdv",0,370,17],
+	["rhs_bmp3m_msv",0,370,17],
 	["rhs_t72ba_tv",0,450,20],
 	["rhs_sprut_vdv",0,400,20],
 	["rhs_t90a_tv",0,600,25],
@@ -194,8 +202,8 @@ support_vehicles_extension = [
 	["B_Slingload_01_Repair_F",5,0,0],
 	["B_Slingload_01_Fuel_F",5,0,20],
 	["B_Slingload_01_Ammo_F",5,60,0],
-	["Box_NATO_AmmoVeh_F",0,154,0],
-	["Box_East_AmmoVeh_F",0,115,0]
+	["Box_East_AmmoVeh_F",0,154,0],
+	["Box_NATO_AmmoVeh_F",0,115,0]
 ];
 
 // All the UAVs must be declared here, otherwise there shall be UAV controlling issues. Namely: you won't be able to control them.
@@ -335,6 +343,7 @@ militia_squad_extension = [
 militia_vehicles_overwrite = true;
 militia_vehicles_extension = [
 	"LOP_NAPA_Landrover_M2",
+	"LOP_NAPA_Landrover_M2",
 	"LOP_NAPA_Offroad_M2"
 ];
 
@@ -372,18 +381,22 @@ opfor_vehicles_low_intensity_extension = [
 opfor_battlegroup_vehicles_overwrite = true;
 opfor_battlegroup_vehicles_extension = [
 	"rhsgref_cdf_b_reg_uaz_ags",
+	"rhsgref_cdf_b_reg_uaz_ags",
+	"rhsgref_cdf_b_reg_uaz_dshkm",
 	"rhsgref_cdf_b_reg_uaz_dshkm",
 	"rhsgref_cdf_b_btr60",
 	"rhsgref_cdf_b_btr70",
-	"rhsgref_cdf_b_bmp2d",
 	"rhsgref_cdf_b_btr70",
-	"rhsgref_cdf_b_ural_open",
+	"rhsgref_cdf_b_btr70",
+	"rhsgref_cdf_b_bmp2d",
 	"rhsgref_cdf_b_t80b_tv",
 	"rhsgref_cdf_b_t80b_tv",
 	"rhsgref_cdf_b_zsu234",
 	"rhsgref_b_mi24g_CAS",
 	"rhsgref_cdf_b_Mi24D",
+	"rhsgref_cdf_b_Mi24D",
 	"rhsgref_cdf_b_reg_Mi8amt",
+	"rhsgref_cdf_b_ural_open",
 	"rhsgref_cdf_b_ural"
 ];
 
@@ -392,6 +405,7 @@ opfor_battlegroup_vehicles_low_intensity_overwrite = true;
 opfor_battlegroup_vehicles_low_intensity_extension = [
 	"rhsgref_cdf_b_bmp2d",
 	"rhsgref_cdf_b_btr70",
+	"rhsgref_cdf_b_btr60",
 	"rhsgref_cdf_b_reg_uaz_ags",
 	"rhsgref_cdf_b_reg_uaz_dshkm",
 	"rhsgref_cdf_b_reg_uaz_dshkm",
@@ -480,7 +494,12 @@ elite_vehicles_extension = [
 	"O_UAV_01_F",
 	"O_UAV_02_F",
 	"O_UAV_02_CAS_F",
-	"rhs_D30_msv"
+	"rhs_D30_msv",
+	"rhs_btr80a_msv",
+	"rhs_bmd2k",
+	"rhs_bmd2m",
+	"rhs_bmd4m_vdv",
+	"rhs_bmp3m_msv"
 ];
 
 // Blacklisted arsenal items such as deployable weapons  that should be bought instead
