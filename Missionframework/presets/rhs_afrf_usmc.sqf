@@ -293,153 +293,147 @@ blufor_squad_para = [
 // *** BADDIES ***
 
 // All Enemy infantry. Defining a value here will replace the default value from the original mission.
-opfor_sentry = "rhsgref_cdf_b_reg_rifleman_lite";
-opfor_rifleman = "rhsgref_cdf_b_reg_rifleman_m70";
-opfor_grenadier = "rhsgref_cdf_b_reg_grenadier";
-opfor_squad_leader = "rhsgref_cdf_b_reg_squadleader";
-opfor_team_leader = "rhsgref_cdf_b_reg_rifleman";
-opfor_marksman = "rhsgref_cdf_b_reg_marksman";
-opfor_machinegunner = "rhsgref_cdf_b_reg_machinegunner";
-opfor_heavygunner = "rhsgref_cdf_b_para_autorifleman";
-opfor_medic = "rhsgref_cdf_b_reg_medic";
-opfor_rpg = "rhsgref_cdf_b_reg_grenadier_rpg";
-opfor_at = "rhsgref_cdf_b_reg_grenadier_rpg";
-opfor_aa = "rhsgref_cdf_b_reg_specialist_aa";
-opfor_officer = "rhsgref_cdf_b_reg_officer";
-opfor_sharpshooter = "rhsgref_cdf_b_reg_marksman";
-opfor_sniper = "rhsgref_cdf_b_reg_marksman";
-opfor_engineer = "rhsgref_cdf_b_reg_engineer";
-opfor_paratrooper = "rhsgref_cdf_b_para_rifleman";
+opfor_sentry = "rhsusf_usmc_marpat_wd_rifleman_light";
+opfor_rifleman = "rhsusf_usmc_marpat_wd_rifleman_m4";
+opfor_grenadier = "rhsusf_usmc_marpat_wd_grenadier";
+opfor_squad_leader = "rhsusf_usmc_marpat_wd_squadleader";
+opfor_team_leader = "rhsusf_usmc_marpat_wd_teamleader";
+opfor_marksman = 'rhsusf_usmc_marpat_wd_spotter';
+opfor_machinegunner = "rhsusf_usmc_marpat_wd_autorifleman_m249";
+opfor_heavygunner = "rhsusf_usmc_marpat_wd_machinegunner";
+opfor_medic = "rhsusf_navy_marpat_wd_medic";
+opfor_rpg = "rhsusf_usmc_marpat_wd_smaw";
+opfor_at = "rhsusf_usmc_marpat_wd_javelin";
+opfor_aa = "rhsusf_usmc_marpat_wd_stinger";
+opfor_officer = "rhsusf_usmc_marpat_wd_officer";
+opfor_sharpshooter = "rhsusf_usmc_marpat_wd_marksman";
+opfor_sniper = "rhsusf_usmc_marpat_wd_sniper";
+opfor_engineer = "rhsusf_usmc_marpat_wd_engineer";
+opfor_paratrooper = "rhsusf_usmc_marpat_wd_autorifleman";
 
 // Enemy Vehicles to be used in secondary objectives
-opfor_mrap = "rhsgref_BRDM2UM_b";
-opfor_mrap_armed = "rhsgref_BRDM2_b";
-opfor_transport_helo = "rhsgref_cdf_b_reg_Mi8amt";
-opfor_transport_truck = "rhsgref_cdf_b_ural_open";
-opfor_fuel_truck = "rhsgref_cdf_b_ural_fuel";
-opfor_ammo_truck = "rhsgref_cdf_b_gaz66_ammo";
+opfor_mrap = "rhsusf_rg33_usmc_wd";
+opfor_mrap_armed = "rhsusf_rg33_m2_usmc_wd";
+opfor_transport_helo = "RHS_UH1Y_d";
+opfor_transport_truck = "rhsusf_M1078A1P2_wd_fmtv_usarmy";
+opfor_fuel_truck = "rhsusf_M978A4_usarmy_wd";
+opfor_ammo_truck = "rhsusf_M977A4_AMMO_BKIT_usarmy_wd";
 opfor_fuel_container = nil;
 opfor_ammo_container = nil;
-opfor_flag = "FlagCarrierCDF";
+opfor_flag = "Flag_US_F";
 
 // Militia infantry. Soldier classnames the game will pick from randomly
 militia_squad_overwrite = true;
 militia_squad_extension = [
-	"LOP_NAPA_Infantry_SL",
-	"LOP_NAPA_Infantry_MG",
-	"LOP_NAPA_Infantry_AT",
-	"LOP_NAPA_Infantry_Marksman",
-	"LOP_NAPA_Infantry_Engineer",
-	"LOP_NAPA_Infantry_Corpsman",
-	"LOP_NAPA_Infantry_TL",
-	"LOP_NAPA_Infantry_Rifleman",
-	"LOP_NAPA_Infantry_Rifleman_2",
-	"LOP_NAPA_Infantry_Rifleman_3",
-	"LOP_NAPA_Infantry_GL",
-	"LOP_NAPA_Infantry_GL_2",
-	"LOP_NAPA_Infantry_Prizrak"
+	"rhsgref_nat_commander",
+	"rhsgref_nat_specialist_aa",
+	"rhsgref_nat_machinegunner",
+	"rhsgref_nat_medic",
+	"rhsgref_nat_scout",
+	"rhsgref_nat_saboteur",
+	"rhsgref_nat_grenadier",
+	"rhsgref_nat_militiaman_kar98k",
+	"rhsgref_nat_rifleman",
+	"rhsgref_nat_grenadier_rpg",
+	"rhsgref_nat_rifleman_m92",
+	"rhsgref_nat_hunter",
+	"rhsgref_nat_rifleman"
 ];
 
 // Militia vehicles to choose from
 militia_vehicles_overwrite = true;
 militia_vehicles_extension = [
-	"LOP_NAPA_Landrover_M2",
-	"LOP_NAPA_Landrover_M2",
-	"LOP_NAPA_Offroad_M2"
+	"rhsgref_nat_uaz_dshkm",
+	"rhsgref_nat_uaz_ags",
+	"rhsgref_nat_uaz_spg9",
+	"rhsgref_nat_btr70",
+	"rhsgref_nat_ural_Zu23",
+	"rhsgref_ins_g_bmp1",
+	"rhsgref_cdf_t72ba_tv"
 ];
 
 // All the vehicles that can spawn as sector defenders and patrols
 opfor_vehicles_overwrite = true;
 opfor_vehicles_extension = [
-	"rhsgref_cdf_b_btr60",
-	"rhsgref_cdf_b_bmp2d",
-	"rhsgref_cdf_b_btr70",
-	"rhsgref_cdf_b_bmp2d",
-	"rhsgref_cdf_b_btr70",
-	"rhsgref_cdf_b_bmp2k",
-	"rhsgref_cdf_b_t80b_tv",
-	"rhsgref_cdf_b_t80b_tv",
-	"rhsgref_cdf_b_zsu234",
-	"rhsgref_BRDM2_b",
-	"rhsgref_BRDM2_b",
-	"rhsgref_cdf_b_reg_uaz_dshkm"
+	"rhsusf_M1117_W",
+	"rhsusf_M1237_M2_usarmy_wd",
+	"rhsusf_M1237_MK19_usarmy_wd",
+	"rhsusf_rg33_m2_usmc_wd",
+	"RHS_M2A3_BUSKI_wd",
+	"rhsusf_m113_usarmy",
+	"RHS_M6_wd",
+	"rhsusf_m1a1hc_wd"
+
 ];
 
 // Same with lighter choices to be used  when the alert level is low
 opfor_vehicles_low_intensity_overwrite = true;
 opfor_vehicles_low_intensity_extension = [
-	"rhsgref_cdf_b_bmp2d",
-	"rhsgref_cdf_b_btr60",
-	"rhsgref_cdf_b_btr60",
-	"rhsgref_cdf_b_btr70",
-	"rhsgref_cdf_b_reg_uaz_dshkm",
-	"rhsgref_cdf_b_reg_uaz_dshkm",
-	"rhsgref_cdf_b_reg_uaz_ags",
-	"rhsgref_cdf_b_reg_uaz_spg9"
+	"rhsusf_m1025_w_s_m2",
+	"rhsusf_m1025_w_s_Mk19",
+	"rhsusf_m113_usarmy_MK19",
+	"rhsusf_m113_usarmy",
+	"rhsusf_M1232_M2_usarmy_wd",
+	"rhsusf_M1117_W"
 ];
 
 // All the vehicles that can spawn as battlegroup members
 opfor_battlegroup_vehicles_overwrite = true;
 opfor_battlegroup_vehicles_extension = [
-	"rhsgref_cdf_b_reg_uaz_ags",
-	"rhsgref_cdf_b_reg_uaz_ags",
-	"rhsgref_cdf_b_reg_uaz_dshkm",
-	"rhsgref_cdf_b_reg_uaz_dshkm",
-	"rhsgref_cdf_b_btr60",
-	"rhsgref_cdf_b_btr70",
-	"rhsgref_cdf_b_btr70",
-	"rhsgref_cdf_b_btr70",
-	"rhsgref_cdf_b_bmp2d",
-	"rhsgref_cdf_b_t80b_tv",
-	"rhsgref_cdf_b_t80b_tv",
-	"rhsgref_cdf_b_zsu234",
-	"rhsgref_b_mi24g_CAS",
-	"rhsgref_cdf_b_Mi24D",
-	"rhsgref_cdf_b_Mi24D",
-	"rhsgref_cdf_b_reg_Mi8amt",
-	"rhsgref_cdf_b_ural_open",
-	"rhsgref_cdf_b_ural"
+	"RHS_M2A3_BUSKIII_wd",
+	"rhsusf_m1a1aim_tuski_wd",
+	"RHS_M6_wd",
+	"rhsusf_m1a2sep1tuskiiwd_usarmy",
+	"rhsusf_M1083A1P2_B_M2_wd_fmtv_usarmy",
+	"rhsusf_M1117_W",
+	"RHS_MELB_AH6M_M",
+	"RHS_AH1Z",
+	"RHS_AH64D",
+	"RHS_UH1Y_d"	
 ];
 
 // Same with lighter choices to be used  when the alert level is low
 opfor_battlegroup_vehicles_low_intensity_overwrite = true;
 opfor_battlegroup_vehicles_low_intensity_extension = [
-	"rhsgref_cdf_b_bmp2d",
-	"rhsgref_cdf_b_btr70",
-	"rhsgref_cdf_b_btr60",
-	"rhsgref_cdf_b_reg_uaz_ags",
-	"rhsgref_cdf_b_reg_uaz_dshkm",
-	"rhsgref_cdf_b_reg_uaz_dshkm",
-	"rhsgref_cdf_b_ural_open",
-	"rhsgref_cdf_b_reg_Mi8amt",
-	"rhsgref_cdf_b_ural_open"
+	"rhsusf_rg33_m2_usmc_wd",
+	"rhsusf_M1117_W",
+	"rhsusf_m113_usarmy",
+	"RHS_M2A3_wd",
+	"RHS_M6_wd",
+	"rhsusf_m1a1hc_wd",
+	"RHS_MELB_AH6M_L",
+	"RHS_UH1Y_d"
 ];
 
 // All the vehicles that can spawn as battlegroup members (see above) and also hold 8 soldiers as passengers.
 // If something in here can't hold all 8 soldiers then buggy behaviours may occur
 opfor_troup_transports_overwrite = true;
 opfor_troup_transports_extension = [
-	"rhsgref_cdf_b_bmp2d",
-	"rhsgref_cdf_b_btr70",
-	"rhsgref_cdf_b_ural_open",
-	"rhsgref_cdf_b_ural",
-	"rhsgref_cdf_b_Mi24D",
-	"rhsgref_cdf_b_reg_Mi8amt",
-	"rhsgref_b_mi24g_CAS"
+	"rhsusf_M1083A1P2_B_wd_fmtv_usarmy",
+	"RHS_UH1Y_d",
+	"RHS_M2A3_wd",
+	"RHS_M2A3_BUSKIII_wd",
+	"rhsusf_M1237_MK19_usarmy_wd",
+	"rhsusf_M1237_M2_usarmy_wd",
+	"rhsusf_M1083A1P2_B_M2_wd_fmtv_usarmy"
 ];
 
 // Battlegroup members that will need to spawn in flight. Should be only helos but, who knows
 opfor_choppers_overwrite = true;
 opfor_choppers_extension = [
-	"rhsgref_b_mi24g_CAS",
-	"rhsgref_cdf_b_Mi24D",
-	"rhsgref_cdf_b_reg_Mi8amt"
+	"RHS_UH1Y_d",
+	"RHS_AH64D",
+	"RHS_AH1Z",
+	"RHS_MELB_AH6M_M",
+	"RHS_MELB_AH6M_L"
 ];
 
 // Opfor military aircrafts
 opfor_air_overwrite = true;
 opfor_air_extension = [
-	"rhs_l159_cdf_b_CDF_plamen"
+	"RHS_A10",
+	"RHS_A10_AT",
+	"rhsusf_f22"
 ];
 
 
