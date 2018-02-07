@@ -48,3 +48,7 @@ Temporary Items
 
 # Build directory
 build/
+
+# Node
+node_modules/
+npm-debug.log*

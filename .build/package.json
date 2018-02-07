@@ -1,0 +1,15 @@
+{
+  "name": "kp_liberation",
+  "main": "index.js",
+  "engines": {
+    "node": ">=7"
+  },
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "smart-zip": "0.0.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "node ./index.js"
+  }
+}

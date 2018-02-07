@@ -1,0 +1,29 @@
+[
+    {
+        "map": "Altis",
+        "settings": {
+            "blufor": 0,
+            "opfor": 0,
+            "resistance": 0,
+            "civilian": 0
+        }
+    },
+    {
+        "map": "Malden",
+        "settings": {
+            "blufor": 0,
+            "opfor": 0,
+            "resistance": 0,
+            "civilian": 0
+        }
+    },
+    {
+        "map": "Takistan",
+        "settings": {
+            "blufor": 7,
+            "opfor": 3,
+            "resistance": 3,
+            "civilian": 2
+        }
+    }
+]

@@ -1,0 +1,31 @@
+sudo: false
+
+language: node_js
+node_js:
+  - node
+
+deploy:
+  provider: releases
+  api_key:
+    secure: $GITHUB_TOKEN
+  file_glob: true
+  file: build/*
+  skip_cleanup: true
+  on:
+    repo: $GITHUB_REPO_NAME
+    tags: true
+
+cache:
+  directories:
+    - node_modules
+
+before_script:
+  - cd .build
+  - npm install
+
+script:
+  - npm run build
+
+before_deploy:
+  - cd ..
+  - echo "Listing built files" && ls ./build/ 
