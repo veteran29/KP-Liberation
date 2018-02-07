@@ -3,7 +3,7 @@ const
     smartZip = require('smart-zip'),
     path = require('path'),
     config = require('./config'),
-    buildConfig = require('./build.json');
+    buildConfig = require('./presets.json');
 
 
 console.debug = config.debug ? console.log.bind(null, 'debug: ') : function () { };

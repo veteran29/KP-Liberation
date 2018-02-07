@@ -1,5 +1,6 @@
 [
     {
+        "name": "kp_liberation",
         "map": "Altis",
         "settings": {
             "blufor": 0,
@@ -9,6 +10,7 @@
         }
     },
     {
+        "name": "kp_liberation",
         "map": "Malden",
         "settings": {
             "blufor": 0,
@@ -18,6 +20,7 @@
         }
     },
     {
+        "name": "kp_liberation",
         "map": "Takistan",
         "settings": {
             "blufor": 7,
