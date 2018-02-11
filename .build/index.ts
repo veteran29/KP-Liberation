@@ -1,15 +1,16 @@
 import { resolve } from "path";
 
-import { Preset, FolderStructureInfo } from "./src/MissionBuilder";
-import { BuilderConfiguration } from "./src/Config";
-import buildMission from "./src/buildMission";
+import { Preset, FolderStructureInfo } from "./src";
+import { BuilderConfiguration } from "./src";
+import { buildMission } from "./src";
+
 
 const presets: Preset[] = require('./_presets.json');
 
 const builderConf: BuilderConfiguration = {
     outputDir: resolve("../build"),
     async: false,
-    verbose: true,  
+    verbose: true,
     zip: true,
     pbo: true
 };

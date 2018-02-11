@@ -1,6 +1,6 @@
 {
   "name": "kp_liberation",
-  "main": "dist/build.js",
+  "main": "dist/index.js",
   "engines": {
     "node": ">=7"
   },
