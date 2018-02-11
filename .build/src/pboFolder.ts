@@ -12,7 +12,7 @@ export async function pboFolder(folder: string, compress = true) {
             return gulp.src(folder.concat('/**/*'))
                 .pipe(gulpPbo({
                     verbose: false,
-                    progress: true,
+                    progress: false,
                     fileName: folder.concat('.pbo'),
                     compress: compress ? [
                         '**/*.sqf',
