@@ -2,7 +2,7 @@ import { resolve as resolvePath } from 'path';
 import * as gulp from "gulp";
 import * as gulpPbo from "gulp-armapbo";
 /**
- * 
+ *
  * @param folder Folder to PBO
  * @param compress should pbo be compressed
  */
@@ -11,7 +11,7 @@ export async function pboFolder(folder: string, compress = true) {
         gulp.task('pack', () => {
             return gulp.src(folder.concat('/**/*'))
                 .pipe(gulpPbo({
-                    verbose: true,
+                    verbose: false,
                     progress: true,
                     fileName: folder.concat('.pbo'),
                     compress: compress ? [
@@ -27,4 +27,4 @@ export async function pboFolder(folder: string, compress = true) {
 
         gulp.start('pack');
     });
-} 
+}
