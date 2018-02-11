@@ -1,15 +1,23 @@
 {
   "name": "kp_liberation",
-  "main": "index.js",
+  "main": "dist/build.js",
   "engines": {
     "node": ">=7"
   },
   "dependencies": {
+    "@types/fs-extra": "^5.0.0",
+    "console-chalk": "0.0.3",
     "fs-extra": "^5.0.0",
+    "gulp": "^3.9.1",
+    "gulp-armapbo": "^1.1.3",
     "smart-zip": "0.0.9"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/gulp": "^4.0.5",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.7.1"
+  },
   "scripts": {
-    "build": "node ./index.js"
+    "build": "node -r ts-node/register ./index.ts"
   }
 }

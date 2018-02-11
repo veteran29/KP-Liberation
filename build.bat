@@ -1,10 +1,10 @@
 @echo off
 
-rem check that makepbo exists before continuing
-where /q makepbo
+rem Check that https://nodejs.org/en/download/ exists before continuing
+where /q node
 if ERRORLEVEL 1 (
-    echo makepbo is missing. Ensure it is installed. It can be downloaded from:
-    echo https://armaservices.maverick-applications.com/Products/MikerosDosTools/FileBrowserFree
+    echo node is missing. Ensure it is installed. It can be downloaded from:
+    echo https://nodejs.org/en/download/
     timeout 30
     exit /b
 )
@@ -13,11 +13,14 @@ rem Remove and recreate build folder
 if exist build rd /s /q build >NUL
 if not exist build mkdir build >NUL
 
-rem Create each mission with the framework files
-for /D %%s in (Missionbasefiles\*) do (
-	@echo %%~nxs
-	xcopy %%s build\%%~nxs /s /e /i /q >NUL
-	xcopy Missionframework\* build\%%~nxs /s /e /q >NUL
-	makepbo -np build\%%~nxs build\%%~nxs.pbo >NUL
-	rd /s /q build\%%~nxs >NUL
-)
+rem CD into build tool directory
+cd %~dp0.build
+
+rem Install dependencies and build missions
+call npm install --loglevel=error
+call npm run build
+
+echo.
+
+pause
+exit /b
