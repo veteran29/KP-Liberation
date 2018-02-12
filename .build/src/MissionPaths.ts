@@ -65,7 +65,7 @@ export class MissionPaths {
     public getMissionConfigFilePath(): string {
         return path.resolve(
             this.getOutputDir(),
-            this.folderStructure.missionConfigFile
+            this.preset.configFile
         );
     }
 
