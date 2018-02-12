@@ -91,7 +91,7 @@ for (let preset of presets) {
                     'description.ext'
                 ]
             }))
-            .pipe(gulp.dest(mission.getWorkDir() + '/PBO'));
+            .pipe(gulp.dest(mission.getWorkDir() + '/pbo'));
     });
 
     /**
