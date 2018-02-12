@@ -8,9 +8,6 @@ cache:
   directories:
     - node_modules
 
-stages:
-  - name: deploy
-
 # Only build tags
 if: tag IS present
 
@@ -29,3 +26,8 @@ before_deploy:
   - npx gulp
   - echo "Listing built files"
   - ls ./build/
+
+jobs:
+  include:
+    - stage: deploy
+      script: skip # default job will be skipped
