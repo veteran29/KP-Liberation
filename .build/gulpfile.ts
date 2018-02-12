@@ -19,7 +19,6 @@ const presets: Preset[] = require('./_presets.json');
 const paths: FolderStructureInfo = {
     frameworkFolder: resolve('..', 'Missionframework'),
     missionsFolder: resolve('..', 'Missionbasefiles'),
-    missionConfigFile: 'kp_liberation_config.sqf',
     workDir: resolve("./build")
 };
 
@@ -125,6 +124,7 @@ for (let preset of presets) {
 
 }
 
+// Main tasks
 gulp.task('clean', () => {
     return gulp.src(paths.workDir)
         .pipe(vinylPaths(del));

@@ -3,6 +3,7 @@
         "sourceFolder": "kp_liberation.Altis",
         "missionName": "kp_liberation",
         "map": "Altis",
+        "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 0,
             "KP_liberation_preset_opfor": 0,
