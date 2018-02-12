@@ -21,7 +21,7 @@ deploy:
     tags: true
 
 before_deploy:
-  - cd .build
+  - cd _tools
   - npm install
   - npx gulp
   - echo "Listing built files"
