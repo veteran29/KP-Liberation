@@ -18,7 +18,7 @@ cd %~dp0.build
 
 rem Install dependencies and build missions
 call npm install --loglevel=error
-call npm run build
+call npx gulp
 
 echo.
 

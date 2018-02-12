@@ -5,8 +5,6 @@
         "strictNullChecks": true,
         "module": "commonjs",
         "target": "es6",
-        "declaration": true,
-        "allowJs": false,
         "noUnusedParameters": true,
         "noUnusedLocals": true,
         "noImplicitAny": true

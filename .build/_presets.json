@@ -1,6 +1,7 @@
 [
     {
-        "name": "kp_liberation",
+        "sourceFolder": "kp_liberation.Altis",
+        "missionName": "kp_liberation",
         "map": "Altis",
         "variables": {
             "KP_liberation_preset_blufor": 0,
@@ -11,7 +12,8 @@
         }
     },
     {
-        "name": "kp_liberation",
+        "sourceFolder": "kp_liberation.Malden",
+        "missionName": "kp_liberation",
         "map": "Malden",
         "variables": {
             "KP_liberation_preset_blufor": 0,
@@ -22,11 +24,25 @@
         }
     },
     {
-        "name": "kp_liberation",
+        "sourceFolder": "kp_liberation.Takistan",
+        "missionName": "kp_liberation",
         "map": "Takistan",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 7,
+            "KP_liberation_preset_opfor": 3,
+            "KP_liberation_preset_resistance": 3,
+            "KP_liberation_preset_civilians": 2,
+            "KP_liberation_arsenal": 0
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.Takistan",
+        "missionName": "kp_liberation_AFRF",
+        "map": "Takistan",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 8,
             "KP_liberation_preset_opfor": 3,
             "KP_liberation_preset_resistance": 3,
             "KP_liberation_preset_civilians": 2,
