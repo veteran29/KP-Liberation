@@ -13,6 +13,9 @@ import { Preset, FolderStructureInfo } from "./src";
 
 const presets: Preset[] = require('./_presets.json');
 
+/** 
+ * Mission folders configuration
+*/
 const paths: FolderStructureInfo = {
     frameworkFolder: resolve('..', 'Missionframework'),
     missionsFolder: resolve('..', 'Missionbasefiles'),
@@ -22,7 +25,7 @@ const paths: FolderStructureInfo = {
 
 
 /**
- * Build gulp tasks
+ * Create gulp tasks
  */
 let taskNames: string[] = [];
 let taskNamesPbo: string[] = [];
@@ -95,25 +98,22 @@ for (let preset of presets) {
     });
 
     /**
-     * Pack PBOs
+     * Create ZIP files
      */
     taskNamesZip.push('zip_' + taskName);
 
     gulp.task('zip_' + taskName, () => {
-        const tempDir = mission.getWorkDir() + '/tmp/';
-
-        // We need to build temporary folder to have correct paths in ZIP file
         return gulp.src([
             resolve('..', './userconfig/**/*'),
             resolve('..', 'LICENSE.md'),
             resolve('..', 'README.md')
         ], {
-                base: resolve('..')
+                base: resolve('..') // Change base dir to have correct relative paths in ZIP
             })
             .pipe(
                 gulp.src(
                     resolve(mission.getWorkDir(), 'pbo', mission.getFullName() + '.pbo'), {
-                        base: resolve(mission.getWorkDir(), 'pbo')
+                        base: resolve(mission.getWorkDir(), 'pbo') // Change base dir to have correct relative paths in ZIP
                     })
             )
             .pipe(gulpZip(

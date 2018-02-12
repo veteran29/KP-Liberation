@@ -21,6 +21,6 @@
     "vinyl-paths": "^2.1.0"
   },
   "scripts": {
-    "build": "node -r ts-node/register ./index.ts"
+    "build": "npx gulp"
   }
 }
