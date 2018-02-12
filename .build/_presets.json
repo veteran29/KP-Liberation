@@ -28,6 +28,7 @@
         "sourceFolder": "kp_liberation.Malden",
         "missionName": "kp_liberation",
         "map": "Malden",
+        "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 0,
             "KP_liberation_preset_opfor": 0,
