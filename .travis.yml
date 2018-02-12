@@ -4,6 +4,16 @@ language: node_js
 node_js:
   - node
 
+cache:
+  directories:
+    - node_modules
+
+stages:
+  - name: deploy
+
+# Only build tags
+if: tag IS present
+
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
@@ -11,12 +21,7 @@ deploy:
   file: build/*
   skip_cleanup: true
   on:
-    repo: $GITHUB_REPO_NAME
     tags: true
-
-cache:
-  directories:
-    - node_modules
 
 before_deploy:
   - cd .build
