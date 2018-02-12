@@ -18,12 +18,9 @@ cache:
   directories:
     - node_modules
 
-before_script:
+before_deploy:
   - cd .build
   - npm install
-
-script:
   - npx gulp
-
-before_deploy:
-  - echo "Listing built files" && ls ./build/ 
+  - echo "Listing built files"
+  - ls ./build/
