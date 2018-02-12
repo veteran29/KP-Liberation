@@ -23,8 +23,7 @@ before_script:
   - npm install
 
 script:
-  - npm run build
+  - npx gulp
 
 before_deploy:
-  - cd ..
   - echo "Listing built files" && ls ./build/ 
