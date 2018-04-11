@@ -1,3 +1,13 @@
+## KP Liberation Customizations:
+This branch has customizations for my own playstyle.
+Applied changes:
+*  Increasead building defence AI search radius to 100m (from 40)
+*  Increased FOB build range to 150m (from 125)
+*  Increased default resource build time to 45min (from 30)
+
+
+## Original README content:
+
 ![KP Liberation](https://www.killahpotatoes.de/images/arma/liberation.png)
 
 # KP Liberation for ArmA 3
