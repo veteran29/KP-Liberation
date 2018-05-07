@@ -1,3 +1,32 @@
+// Paradrops player at given position
+fnc_paradropPlayer = {
+	params ["_haloPos"];
+	private _backpack = nil;
+	private _backpackcontents = [];
+
+	_haloPos = [ _haloPos select 0, _haloPos select 1, GRLIB_halo_altitude + (random 200) ];
+	halojumping = true;
+	playSound "parasound";
+	_backpack = backpack player;
+	if ( _backpack != "" && _backpack != "B_Parachute" ) then {
+		_backpackcontents = backpackItems player;
+		removeBackpack player;
+		uiSleep 0.1;
+	};
+	player addBackpack "B_Parachute";
+	player setPosASL _haloPos;
+
+	uiSleep 4;
+	halojumping = false;
+	waitUntil { !alive player || isTouchingGround player };
+	if ( _backpack != "" && _backpack != "B_Parachute" && alive player ) then {
+		uiSleep 2;
+		player addBackpack _backpack;
+		clearAllItemsFromBackpack player;
+		{ player addItemToBackpack _x } foreach _backpackcontents;
+	};
+};
+
 choiceslist = [];
 fullmap = 0;
 private _old_fullmap = 0;
@@ -90,7 +119,7 @@ while {true} do {
 				for [ {_idx=0},{_idx < count _respawn_trucks},{_idx=_idx+1} ] do {
 					choiceslist = choiceslist + [[format ["%1 - %2", localize "STR_RESPAWN_TRUCK",mapGridPosition (getposATL (_respawn_trucks select _idx))],getposATL (_respawn_trucks select _idx),(_respawn_trucks select _idx)]];
 				};
-			};	
+			};
 		};
 
 		lbClear 201;
@@ -153,17 +182,28 @@ while {true} do {
 		private _idxchoice = lbCurSel 201;
 		_spawn_str = (choiceslist select _idxchoice) select 0;
 
+		if ((lbCurSel 203) > 0) then {
+			[player, [profileNamespace, _loadouts_data select ((lbCurSel 203) - 1)]] call bis_fnc_loadInventory;
+		};
+
 		if (count (choiceslist select _idxchoice) == 3) then {
 			private _truck = (choiceslist select _idxchoice) select 2;
-			player setposATL (_truck getPos [5 + (random 3), random 360]);
+			private _destpos = (_truck getPos [5 + (random 3), random 360]);
+            // Move player do dest pos for a moment (this is checked in waitUntil)
+            // I do not want to touch this as god only knows what will break ;-)
+			player setposATL _destpos;
+            // Paradrop player
+			[_destpos] spawn fnc_paradropPlayer;
+
 			KP_liberation_respawn_mobile_done = true;
 		} else {
 			private _destpos = ((choiceslist select _idxchoice) select 1);
-			player setposATL [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),(_destpos select 2)];
-		};
-
-		if ((lbCurSel 203) > 0) then {
-			[player, [profileNamespace, _loadouts_data select ((lbCurSel 203) - 1)]] call bis_fnc_loadInventory;
+			_destpos = [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),(_destpos select 2)];
+            // Move player do dest pos for a moment (this is checked in waitUntil)
+            // I do not want to touch this as god only knows what will break ;-)
+			player setposATL _destpos;
+            // Paradrop player
+			[_destpos] spawn fnc_paradropPlayer;
 		};
 	};
 
@@ -184,7 +224,7 @@ while {true} do {
 			KP_liberation_respawn_mobile_done = false;
 		};
 	};
-	
+
 	if (KP_liberation_arsenalUsePreset) then {
 		[_backpack] call F_checkGear;
 	};
