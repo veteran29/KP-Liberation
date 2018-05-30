@@ -10,6 +10,7 @@
 	<!-- Chinese Traditional localization made by John M. Rodriguez: https://github.com/KOEI5113 -->
 	<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
 	<!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
+    <!-- Polish localization made by Scotty: https://github.com/Kornish adapted for 0.97 by veteran29 -->
     <Package name="General">
         <Key ID="STR_MISSION_TITLE">
             <Original>KP Liberation v0.97dev</Original>
@@ -28,6 +29,7 @@
             <Chinese>從敵人手中解放此區域！戰略是致勝關鍵！士兵們，祝好運！</Chinese>
             <Turkish>Bu bölgeyi düşman etkisinden kurtar! Strateji anahtardır! Bol şanslar askerler.</Turkish>
             <Portuguese>Libere a região da opressão inimiga! Estratégia será essencial! Boa sorte infantaria.</Portuguese>
+            <Polish>Uwolnij obszar z jarzma nieprzyjaciela! Strategia będzie kluczem do zwycięstwa! Powodzenia!</Polish>
         </Key>
         <Key ID="STR_YES">
             <Original>Yes</Original>
@@ -40,6 +42,7 @@
             <Chinese>是</Chinese>
             <Turkish>Evet</Turkish>
             <Portuguese>Sim</Portuguese>
+            <Polish>Tak</Polish>
         </Key>
         <Key ID="STR_NO">
             <Original>No</Original>
@@ -52,10 +55,12 @@
             <Chinese>否</Chinese>
             <Turkish>Hayır</Turkish>
             <Portuguese>Não</Portuguese>
+            <Polish>Nie</Polish>
         </Key>
         <Key ID="STR_MAINBASE">
             <Original>Operation Base</Original>
             <German>Operationsbasis</German>
+            <Polish>Centrum operacji</Polish>
         </Key>
         <Key ID="STR_RESPAWN_TRUCK">
             <Original>Mobile respawn</Original>
@@ -68,6 +73,7 @@
             <Chinese>機動復活載具</Chinese>
             <Turkish>Respawn Aracı</Turkish>
             <Portuguese>Respawn móvel</Portuguese>
+            <Polish>Mobilny respawn</Polish>
         </Key>
         <Key ID="STR_NEAR">
             <Original>Near</Original>
@@ -80,31 +86,38 @@
             <Chinese>附近</Chinese>
             <Turkish>Yakın</Turkish>
             <Portuguese>Próximo de</Portuguese>
+            <Polish>W pobliżu</Polish>
         </Key>
     </Package>
     <Package name="Params">
         <Key ID="STR_PARAMS_PARAMSOPTIONS">
             <Original>== PARAMETRS OPTIONS ==  [ Loaded values will be visible in diary "Mission Parameters" ] </Original>
+            <Polish>== USTAWIENIA PARAMETRÓW == [ Załadowane wartości bedą widoczne w Dzienniku "Ustawienia misji" ]</Polish>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS">
             <Original>Load/Save Parameters</Original>
             <German>Laden/Speichern der Parameter</German>
+            <Polish>Wczytaj/Zapisz Parametry</Polish>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_SAVE">
             <Original>SAVE selected parameters</Original>
             <German>SPEICHERN der momentanen Parameter</German>
+            <Polish>ZAPISZ wybrane parametry</Polish>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_LOAD">
             <Original>LOAD parameters or use selected if no saved value found</Original>
             <German>LADEN der gespeicherten Parameter oder momentane nutzen, wenn keine gespeicherten vorhanden sind</German>
+            <Polish>WCZYTAJ parametry lub użyj wybranej wartości gdy brak zapisanej wartości</Polish>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_SELECTED">
             <Original>USE Lobby values without saving</Original>
             <German>BENUTZE aktuelle Werte ohne Speicherung</German>
+            <Polish>UŻYJ wybranych wartości bez zapisywania</Polish>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_WIPE">
             <Original>WIPE saved values and use Lobby values</Original>
             <German>LÖSCHT gespeicherte Werte und verwendet die aktuell eingestellten Werte</German>
+            <Polish>USUŃ zapisane wartości a następnie użyj wybranych wartości</Polish>
         </Key>
         <Key ID="STR_PARAMS_ENABLED">
             <Original>Enabled</Original>
@@ -117,6 +130,7 @@
             <Chinese>開啟</Chinese>
             <Turkish>Aktif</Turkish>
             <Portuguese>Ativado</Portuguese>
+            <Polish>Włączone</Polish>
         </Key>
         <Key ID="STR_PARAMS_DISABLED">
             <Original>Disabled</Original>
@@ -129,6 +143,7 @@
             <Chinese>關閉</Chinese>
             <Turkish>Kapalı</Turkish>
             <Portuguese>Desativado</Portuguese>
+            <Polish>Wyłączone</Polish>
         </Key>
         <Key ID="STR_PARAMS_MISSIONOPTIONS">
             <Original>== MISSION OPTIONS ==</Original>
@@ -141,6 +156,7 @@
             <Chinese>== 任務選項 ==</Chinese>
             <Turkish>== BÖLÜM AYARLARI ==</Turkish>
             <Portuguese>== OPÇÕES DA MISSÃO ==</Portuguese>
+            <Polish>== USTAWIENIA MISJI ==</Polish>
         </Key>
         <Key ID="STR_PARAMS_UNITCAP">
             <Original>Maximum amount of AI units</Original>
