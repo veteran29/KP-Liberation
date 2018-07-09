@@ -173,22 +173,6 @@ private _redeploy_mainLoop = {
 
 		((findDisplay 5201) displayCtrl 201) ctrlAddEventHandler ["mouseButtonDblClick", {deploy = 1;}];
 
-		private _saved_loadouts = profileNamespace getVariable "bis_fnc_saveInventory_data";
-		private _loadouts_data = [];
-		private _counter = 0;
-		if (!isNil "_saved_loadouts") then {
-			{
-				if (_counter % 2 == 0) then {
-					_loadouts_data pushback _x;
-				};
-				_counter = _counter + 1;
-			} forEach _saved_loadouts;
-		};
-
-		lbAdd [203, "--"];
-		{lbAdd [203, _x];} forEach _loadouts_data;
-		lbSetCurSel [203, 0];
-
 		// Handler which runs until player redeploys or closes the dialog
 		[
 			KPLIB_redeploy_listHandlerLoop, // code
@@ -200,11 +184,33 @@ private _redeploy_mainLoop = {
 				_old_fullmap = 0;
 				_standard_map_pos = ctrlPosition ((findDisplay 5201) displayCtrl 251);
 				_frame_pos = ctrlPosition ((findDisplay 5201) displayCtrl 198);
+
+				// Initialize louadout listbox and data
+				private _saved_loadouts = profileNamespace getVariable "bis_fnc_saveInventory_data";
+				_loadouts_data = [];
+				private _counter = 0;
+				if (!isNil "_saved_loadouts") then {
+					{
+						if (_counter % 2 == 0) then {
+							_loadouts_data pushback _x;
+						};
+						_counter = _counter + 1;
+					} forEach _saved_loadouts;
+				};
+
+				lbAdd [203, "--"];
+				{lbAdd [203, _x];} forEach _loadouts_data;
+				lbSetCurSel [203, 0];		
 			},
 			KPLIB_redeploy_handleRespawn, // end code
 			{true}, // run condition
 			{!(dialog && alive player && deploy == 0)}, // end condition
-			["_oldsel", "_old_fullmap", "_frame_pos", "_standard_map_pos"] // private vars to serialize between calls
+			[
+				"_oldsel",
+				"_old_fullmap","_frame_pos",
+				"_standard_map_pos",
+				"_loadouts_data"
+			] // private vars to serialize between calls
 		] call CBA_fnc_createPerFrameHandlerObject;
 
 	}] call CBA_fnc_waitUntilAndExecute;
