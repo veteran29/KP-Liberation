@@ -1,0 +1,6 @@
+# Jekyll output
+_site/
+.jekyll-metadata
+
+# We always want latest packages as used by GitHub pages
+Gemfile.lock

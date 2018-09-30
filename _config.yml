@@ -1,4 +1,17 @@
-theme: jekyll-theme-slate
 title: KP Liberation
+
+baseUrl: liberation.killahpotatoes.de
+
 description: A persistent campaign for ArmA3 to liberate an area that will span several weeks of real time
-repository: Wyqer/kp_liberation
+
+repository: KillahPotatoes/KP-Liberation
+
+safe: true
+
+plugins:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
+
+exclude: [.editorconfig, .gitignore, README.md, CNAME, Gemfile, Gemfile.lock, serve.sh]

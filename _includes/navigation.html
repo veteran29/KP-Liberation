@@ -1,0 +1,21 @@
+<nav>
+    <ul>
+        {% assign ordered_pages = site.pages | sort: "order" %}
+
+        {% for node in ordered_pages %}
+            {% if node.group == 'topNav' %}
+                {% if page.url == node.url or (page.parent != null and node.short == page.parent) %}
+                    <li class="active">
+                        <a href="{{node.url}}">{{node.title}}</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{{node.url}}">{{node.title}}</a>
+                    </li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+        {% assign ordered_pages = nil %}
+    </ul>
+</nav>

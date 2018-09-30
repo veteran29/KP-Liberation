@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+        <meta name="theme-color" content="#842833">
+
+        <meta name="description" content="{% if page.description != null %}{{ page.description }}{% else %}{{site.description}}{% endif %}" />
+        <meta name="keywords" content="{% if page.keywords != null %}{{ page.keywords }}{% else %}{{site.keywords}}{% endif %}" />
+        <meta name="robots" content="INDEX,FOLLOW" />
+
+        <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
+
+        <title>{{ page.title }} · KP Liberation</title>
+    </head>
+    <body>
+    <header>
+        <img src="/logo.png">
+        {% include navigation.html %}
+    </header>
