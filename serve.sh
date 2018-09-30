@@ -6,8 +6,10 @@ if grep -q Microsoft /proc/version; then
     echo "WSL detected"
     bundle exec jekyll serve \
         --force_polling \
-        --incremental
+        --incremental \
+        "$@"
 else
     bundle exec jekyll serve \
-        --incremental
+        --incremental \
+        "$@"
 fi
