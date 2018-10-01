@@ -5,6 +5,8 @@ group: topNav
 order: 0
 ---
 
+![Header](header.png)
+
 ## Overview
 The area has fallen to the enemy, and it is up to you to take it back. Embark on a persistent campaign with your teammates to liberate all the major cities of the area that will span several weeks of real time.
 * Experience a massive “Capture the Island” campaign involving a large range of different settlements across the entire area.
