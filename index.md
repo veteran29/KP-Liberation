@@ -5,7 +5,9 @@ group: topNav
 order: 0
 ---
 
+<div markdown="1" class="mx-auto">
 ![Header](header.png)
+</div>
 
 ## Overview
 The area has fallen to the enemy, and it is up to you to take it back. Embark on a persistent campaign with your teammates to liberate all the major cities of the area that will span several weeks of real time.
