@@ -6,7 +6,7 @@ order: 0
 ---
 
 <div markdown="1" class="mx-auto">
-![Header](header.png)
+![Header](/assets/img/header.png)
 </div>
 
 ## Overview
