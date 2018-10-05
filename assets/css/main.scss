@@ -1,4 +1,8 @@
 ---
+# Front matter is needed for jekyll to load the file
 ---
 
+$theme-colors: (
+  "primary": #7A2F2A
+);
 @import "bootstrap/bootstrap";
