@@ -1,0 +1,35 @@
+---
+layout: default
+group: wikiCategory
+parent: wiki
+---
+
+<div class="row">
+    <!-- Description -->
+    <div class="col-md-6">
+        <h5>{{page.title}}</h5>
+        <p>{{page.description}}</p>
+    </div>
+    <!-- Table of contents -->
+    <div class="col-md-6">
+        Table of contents:
+        <ul>
+        {%- assign category_pages = site.pages | where: "category", page.category -%}
+        {%- for node in category_pages -%}
+            {%- if node.url != page.url -%}
+            <li><a href="{{node.url}}">{{node.title}}</a></li>
+            {%- endif -%}
+        {%- endfor -%}
+        </ul>
+    </div>
+</div>
+{%- assign category_pages = nil -%}
+
+{%- assign content_size = content | size -%}
+{% if content_size > 0 %}
+<!-- Additional content -->
+<div class="row">
+    {{ content }}
+</div>
+{% endif %}
+{%- assign content_size = nil -%}
