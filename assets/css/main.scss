@@ -6,3 +6,7 @@ $theme-colors: (
   "primary": #7A2F2A
 );
 @import "bootstrap/bootstrap";
+
+$fa-font-path: "../fonts";
+@import "font-awesome/fontawesome";
+@import "font-awesome/brands";
