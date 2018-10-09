@@ -1,0 +1,66 @@
+---
+layout: default
+title: News
+group: topNav
+order: 1
+---
+
+<div id="news">
+    <article v-if="currentArticle">
+        <a class="btn btn-primary text-white" @click="currentArticle=null">
+            &laquo; Go back
+        </a>
+        <h4>${ currentArticle.title }</h4>
+        <p>${ currentArticle.body }</p>
+    </article>
+
+    <section v-if="!currentArticle">
+
+        <div v-for="article in articles" class="col-sm-12 pb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        ${ article.title }
+                    </h4>
+                    <p class="card-text">
+                        ${ article.description }
+                    </p>
+                    <a class="btn btn-primary text-white" @click="currentArticle=article">
+                        Read more &raquo;
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<script>
+const articlesUrl = 'https://api.github.com/repos/KillahPotatoes/KP-Liberation/issues?state=all&labels=dev-blog';
+
+new Vue({
+    delimiters: ['${', '}'], // change delimeters so we don't conflict with Liquid
+    el: '#news',
+    data() {
+        return {
+            articles: [],
+            currentArticle: null,
+            error: false
+        };
+    },
+    mounted() {
+        this.fetchArticles();
+    },
+    methods: {
+        fetchArticles() {
+            console.log('fetching articles');
+            fetch(articlesUrl)
+            .then(x => x.json())
+            .then(x => this.articles = x)
+            .catch(_ => this.error = true);
+        }
+    }
+});
+</script>
