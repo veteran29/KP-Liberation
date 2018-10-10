@@ -2,6 +2,10 @@
 # Front matter is needed for jekyll to load the file
 ---
 
+[v-cloak] {
+    display: none;
+}
+
 $theme-colors: (
   "primary": #7A2F2A
 );
