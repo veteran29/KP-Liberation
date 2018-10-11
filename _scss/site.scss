@@ -1,0 +1,25 @@
+
+html {
+    height: 100%;
+}
+
+nav.navbar {
+    height: 56px;
+}
+
+main {
+    min-height: calc(100vh - 56px);
+}
+
+[v-cloak] {
+    display: none;
+}
+
+$theme-colors: (
+  "primary": #7A2F2A
+);
+@import "bootstrap/bootstrap";
+
+$fa-font-path: "../fonts";
+@import "font-awesome/fontawesome";
+@import "font-awesome/brands";
