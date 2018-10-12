@@ -5,7 +5,7 @@ group: topNav
 order: 2
 ---
 
-For changelog of legacy version click [here](changelog_legacy).
+For changelog of legacy version [click here](legacy).
 
 ## Changelog
 
