@@ -3,7 +3,7 @@ title: Changelog · Legacy version
 layout: default
 ---
 
-[&laquo; Go back](changelog)
+[&laquo; Go back](./)
 
 ## Legacy version changelog
 

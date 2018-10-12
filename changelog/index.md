@@ -2,7 +2,7 @@
 title: Changelog
 layout: default
 group: topNav
-order: 2
+order: 3
 ---
 
 For changelog of legacy version [click here](legacy).
