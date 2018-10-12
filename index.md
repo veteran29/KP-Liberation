@@ -23,5 +23,4 @@ The area has fallen to the enemy, and it is up to you to take it back. Embark on
 * Never lose your progress with the built-in server-side save system.
 
 ## Media
-[![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
- 
+[![Gameplay](https://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
