@@ -8,6 +8,10 @@ repository: KillahPotatoes/KP-Liberation
 
 safe: true
 
+theme: null
+
+highlighter: rouge
+
 plugins:
   - jekyll-redirect-from
 

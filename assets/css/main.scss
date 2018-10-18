@@ -3,4 +3,6 @@
 # This is only an entrypoint for jekyll sass preprocessor
 ---
 
-@import "site"
+@import "site";
+// Syntax highlighting
+@import "monokai";
