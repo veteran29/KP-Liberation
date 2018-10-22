@@ -26,9 +26,9 @@ This file must contain functions configuration for CfgFunctions.
 
 Files with source of the functions must reside in `fnc` subfolder.
 
-Every module must contain at least single function, `fn_name_preInitModule`, this function must be set to be executed at `preInit`. If module provides any global variables they must be defined in this function.
+Every module must contain at least single function, `fn_name_preInit`, this function must be set to be executed at `preInit`. If module provides any global variables they must be defined in this function.
 
-All `postInit` initialization must be placed into `fn_name_postInitModule` function. This function execution must be set to `postInit`.
+All `postInit` initialization must be placed into `fn_name_postInit` function. This function execution must be set to `postInit`.
 
 
 ## Example module structure
@@ -43,8 +43,8 @@ Missionframework
     ├───03_respawn
     └───04_example
         ├───fnc
-        |   ├───fn_example_postInitModule.sqf
-        |   └───fn_example_preInitModule.sqf
+        |   ├───fn_example_postInit.sqf
+        |   └───fn_example_preInit.sqf
         ├───ui
         ├───functions.hpp
         ├───globals.sqf
@@ -55,7 +55,7 @@ Missionframework
 ```cpp
 // functions.hpp
 class example {
-    file = "modules\03_example\fnc";
+    file = "modules\04_example\fnc";
 
     // Module post initialization
     class example_postInitModule {
