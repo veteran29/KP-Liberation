@@ -21,6 +21,12 @@ img {
     display: none;
 }
 
+.highlight {
+    pre {
+        padding: 1rem;
+    }
+}
+
 $theme-colors: (
   "primary": #7A2F2A
 );

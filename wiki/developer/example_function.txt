@@ -1,0 +1,23 @@
+/*
+    KPLIB_fnc_example_greet
+
+    File: fn_example_greet.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2018-10-20
+    Last Update: 2018-10-23
+    License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+
+    Description:
+        Despawns the sector garrison and updates the garrison array with actual data.
+
+    Parameter(s):
+        _name - Name of person to be greeted [STRING, defaults to "Potato"]
+
+    Returns:
+        Function reached the end [BOOL]
+*/
+params [
+    ["_name", "Potato", [""]]
+];
+
+systemChat format["Hello %1!"];
