@@ -8,7 +8,7 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Despawns the sector garrison and updates the garrison array with actual data.
+        Says hello to person with given name.
 
     Parameter(s):
         _name - Name of person to be greeted [STRING, defaults to "Potato"]
