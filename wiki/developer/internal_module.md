@@ -33,7 +33,7 @@ All `postInit` initialization must be placed into `fn_name_postInit` function. T
 
 ### 2.2. Example module structure
 
-Creation of internal module "example" dependant on module `03_respawn` would result in following folder structure:
+Creation of internal module "example" dependent on module `03_respawn` would result in following folder structure:
 ```
 Missionframework
 └───modules
@@ -72,13 +72,13 @@ class example {
 
 
 ```js
-// fnc\fn_example_preInitModule.sqf
+// fnc\fn_example_preInit.sqf
 KPLIB_exampleSomeStuff = null;
 KPLIB_exampleSomeArray = [];
 ```
 
 ```js
-// fnc\fn_example_postInitModule.sqf
+// fnc\fn_example_postInit.sqf
 if (hasInterface) then {
     systemChat "Hello from example module!";
 };
@@ -106,25 +106,39 @@ Parameter(s):
     NONE
 ```
 
-#### Parameter types
 
-Following types are considered as correct for the parameter list variable types:
+#### Return values
+
+Every function should return a value, if function is expected to process something and not return any value then `true` should be returned as an indicator of successful execution.
+
+Function return value should be documented in following format:
+```
+Returns:
+    Return value descripion [BOOL]
+```
+
+
+#### Parameter and return types
+
+Following types are considered as correct for the parameter list and return types:
  - ARRAY
  - BOOLEAN
+ - CONTROL
+ - DISPLAY
+ - FUNCTION
+ - GROUP
  - LOCATION
  - NUMBER
  - OBJECT
  - POSITION - can also have position type sufix like AGL, ATL etc.
  - STRING
- - GROUP
+ - SIDE
+ - TEXT
+
 
 #### Execution
 
 Functions must not use any execution suspending, it must be possible to execute any module function in unscheduled environment. If you think you need code suspension the code should be placed into `scripts` folder in the root of module folder and executed via `execVM`.
-
-#### Return values
-
-Every function must return a value, if function is expected to process something and not return any value then `true` should be returned as an indicator of successful execution.
 
 
 #### Example function
@@ -167,4 +181,4 @@ For optimal editing experience it is recommended to use an editor that supports 
 
 #### Common functions instead of commands
 
-KP Liberation framework contains a set of "common" functions, these functions shall be prefered over built in commands whenever possible. 
+KP Liberation framework contains a set of "common" functions, these functions shall be preferred over built in commands whenever possible. 
