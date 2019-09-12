@@ -1,11 +1,16 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request: ~
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
+      - uses: actions/checkout@master
       - uses: veteran29/sqflint
-        args: --exit e --directory Missionframework
+        with:
+          args: --exit e --directory Missionframework
