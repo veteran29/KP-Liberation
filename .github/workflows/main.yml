@@ -14,5 +14,15 @@ jobs:
       - uses: veteran29/sqflint@master
         with:
           args: --exit e --directory Missionframework
-      - name: LS
-        run: ls
+
+  artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: docker://node:10-alpine
+        name: Assemble and pack
+        run: |
+          cd _tools
+          npm install
+          npx gulp
+        # TODO Store artifacts from
+        # _tools/build/pbo
