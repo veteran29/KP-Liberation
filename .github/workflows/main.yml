@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: veteran29/sqflint
+      - uses: veteran29/sqflint@master
         with:
           args: --exit e --directory Missionframework
