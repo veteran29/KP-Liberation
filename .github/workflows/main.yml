@@ -14,7 +14,7 @@ jobs:
 
       - uses: veteran29/sqflint@master
         with:
-          args: --exit e --directory Missionframework
+          args: --directory Missionframework
 
   artifacts:
     runs-on: ubuntu-latest
