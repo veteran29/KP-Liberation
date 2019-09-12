@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+
       - uses: veteran29/sqflint@master
         with:
           args: --exit e --directory Missionframework
@@ -19,10 +20,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+
       - uses: docker://node:10-alpine
         name: Install dependencies
         working-directory: ./_tools
-        run: npx gulp
+        run: npm install
+
       - name: Assemble and pack
         working-directory: ./_tools
         run: npx gulp
