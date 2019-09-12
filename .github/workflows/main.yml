@@ -18,10 +18,12 @@ jobs:
   artifacts:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
       - uses: docker://node:10-alpine
-        name: Assemble and pack
-        run: |
-          cd _tools
-          npm install
-          npx gulp
+        name: Install dependencies
+        working-directory: ./_tools
+        run: npx gulp
+      - name: Assemble and pack
+        working-directory: ./_tools
+        run: npx gulp
 
