@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: veteran29/sqflint@master
-        run: ls
-      - uses: veteran29/sqflint@master
         with:
           args: --exit e --directory Missionframework
+      - name: LS
+        run: ls
