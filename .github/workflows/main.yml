@@ -22,7 +22,9 @@ jobs:
       - uses: actions/checkout@master
 
       - uses: docker://node:10-alpine
-        name: Install dependencies
+        name: Setup Node
+
+      - name: Install dependencies
         working-directory: ./_tools
         run: npm install
 
