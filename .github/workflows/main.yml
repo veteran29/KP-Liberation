@@ -16,14 +16,14 @@ jobs:
       - uses: veteran29/sqflint@master
         name: Validate with SQFLint
         with:
-          args: --exit e --directory Missionframework
+          args: --exit '' --directory Missionframework
 
   test-ace-tools:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
 
-      - uses: docker://acemod/armake:master
+      - uses: docker://python:3.7-alpine
         name: Setup Python
 
       - run: python tools/sqf_validator.py
