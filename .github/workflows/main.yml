@@ -27,13 +27,13 @@ jobs:
         name: Setup Python
 
       - run: |
-          python --version
-          python tools/sqf_validator.py
+          python3 --version
+          python3 tools/sqf_validator.py
         name: Validate with ACE SQF Validator
 
       - run: |
-          python --version
-          python tools/config_style_checker.py
+          python3 --version
+          python3 tools/config_style_checker.py
         name: Validate with ACE Config Style Checker
 
   artifacts:
