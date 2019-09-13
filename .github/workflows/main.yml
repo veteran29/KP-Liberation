@@ -26,10 +26,14 @@ jobs:
       - uses: docker://python:3.7-alpine
         name: Setup Python
 
-      - run: python tools/sqf_validator.py
+      - run: |
+          python --version
+          python tools/sqf_validator.py
         name: Validate with ACE SQF Validator
 
-      - run: python tools/config_style_checker.py
+      - run: |
+          python --version
+          python tools/config_style_checker.py
         name: Validate with ACE Config Style Checker
 
   artifacts:
