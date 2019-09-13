@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request: ~
+
+jobs:
+  test-sqflint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: veteran29/sqflint@master
+        name: Validate with SQFLint
+        with:
+          args: --exit e --directory Missionframework
+
+  test-ace-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: docker://acemod/armake:master
+        name: Setup Python
+
+      - run: python tools/sqf_validator.py
+        name: Validate with ACE SQF Validator
+
+      - run: python tools/config_style_checker.py
+        name: Validate with ACE Config Style Checker
+
+  artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: docker://node:10-alpine
+        name: Setup Node
+
+      - name: Install dependencies
+        working-directory: tools/buildtool
+        run: npm install --loglevel=error
+
+      - name: Assemble and pack
+        working-directory: tools/buildtool
+        run: npx gulp
+
+      - uses: actions/upload-artifact@master
+        with:
+          name: PBO-Files
+          path: _build/pbo
+
