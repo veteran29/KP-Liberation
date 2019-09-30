@@ -16,6 +16,8 @@ jobs:
         with:
           args: --directory Missionframework
 
+      - uses: arma-actions/bom-check@master
+
   artifacts:
     runs-on: ubuntu-latest
     steps:
